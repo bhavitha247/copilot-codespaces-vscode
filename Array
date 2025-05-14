@@ -1,0 +1,28 @@
+public class Main {
+    public static void main(String[]args){
+        int[] arr = {2,4,0,5,0,6,0,7};
+        int n = arr.length;
+        int emptyCount = 0;
+        for(int i=0;i<n;i++){
+            if(arr[i]==0){
+                emptyCount++;
+            }
+        }
+        int[] result = new int[n];
+        int index = 0;
+        for(int i=0;i<n;i++){
+            if(arr[i]!=0){
+                result[index++]=arr[i];
+            }
+        }
+        while(emptyCount==0){
+            result[index++]=0;
+            emptyCount--;
+        }
+        System.out.print("RESULT ARRAY : ");
+        for(int i=0;i<n;i++){
+            System.out.print(result[i] + " ");
+        }
+    }
+    
+}
